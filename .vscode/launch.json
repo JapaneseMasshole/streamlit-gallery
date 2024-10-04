@@ -1,0 +1,32 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "python",
+            "request": "launch",
+            "name": "Launch Streamlit App",
+            "program": "${workspaceFolder}/app.py",
+            "args": [
+                "run"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/venv/bin/python"
+            }
+        },
+        {
+            "type": "python",
+            "request": "attach",
+            "name": "Attach",
+            "port": 5679,  # Changed port to 5679
+            "host": "localhost",
+            "pathMappings": [
+                {
+                    "localRoot": "${workspaceFolder}",
+                    "remoteRoot": "${workspaceFolder}"
+                }
+            ]
+        }
+    ]
+}
